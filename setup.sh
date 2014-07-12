@@ -2,15 +2,14 @@
 cd $(dirname $0)
 
 # copy dotsfile to home dir
-for homefile in `ls -a`
+for dotfile in .*
 do
-    if [ $homefile != '..' ] && 
-       [ $homefile != '.' ] && 
-       [ "$homefile" != "`basename $0`" ] && 
-       [ $homefile != '.git' ] && 
-       [ $homefile != '.gitignore' ]
+    if [ $dotfile != '.' ] &&
+       [ $dotfile != '..' ] &&
+       [ $dotfile != '.git' ] &&
+       [ $dotfile != '.gitignore' ]
     then
-        ln -fs "$PWD/$homefile" $HOME
+        ln -fs $PWD/$dotfile $HOME
     fi
 done
 
