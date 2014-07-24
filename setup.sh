@@ -13,4 +13,16 @@ do
     fi
 done
 
+# install neobundle.vim
 curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
+
+# setup bundles
+brew bundle
+
+# setup python
+pip install --upgrade setuptools
+pip install --upgrade pip
+
+# setup powerline
+pip install --user psutil
+pip install --user git+git://github.com/Lokaltog/powerline

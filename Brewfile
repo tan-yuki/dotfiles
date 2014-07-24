@@ -8,6 +8,8 @@ upgrade
 tap peco/peco
 # Install brew-packages
 install tmux
+install python
+install reattach-to-user-namespace
 install zsh
 install ack
 install binutils
@@ -45,7 +47,6 @@ install peco
 install phantomjs
 install pidof
 install postgresql
-install python3
 install qt
 install rbenv
 install reattach-to-user-namespace
