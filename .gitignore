@@ -28,3 +28,4 @@
 /.vim/bundle/
 !/.vim/bundle/neobundle.vim
 !/.config
+!/.pydistutils.cfg
