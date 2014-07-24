@@ -7,10 +7,11 @@ upgrade
 # Add repositories
 tap peco/peco
 # Install brew-packages
+install tmux
+install zsh
 install ack
 install binutils
 install boost
-install composer
 install coreutils
 install ctags
 install findutils
@@ -51,7 +52,6 @@ install reattach-to-user-namespace
 install ruby-build
 install the_silver_searcher
 install tig
-install tmux
 install tree
 install unixodbc
 install w3m
