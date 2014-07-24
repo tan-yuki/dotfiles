@@ -71,9 +71,6 @@ set history=9999
 set ruler
 set cursorline
 
-" - 正規表現
-set regexpengine=0
-
 " ==== tabs
 
 " The prefix key.
