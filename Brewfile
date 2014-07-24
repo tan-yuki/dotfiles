@@ -11,7 +11,9 @@ install tmux
 install python
 install reattach-to-user-namespace
 install zsh
+install vim
 install ack
+install bash
 install binutils
 install boost
 install coreutils

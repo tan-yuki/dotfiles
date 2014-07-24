@@ -13,6 +13,12 @@ do
     fi
 done
 
+# build xcode command line tool
+xcode-select --install
+
+# install brew
+ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+
 # install neobundle.vim
 curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
 
@@ -26,3 +32,6 @@ pip install --upgrade pip
 # setup powerline
 pip install --user psutil
 pip install --user git+git://github.com/Lokaltog/powerline
+
+# setup nvm
+curl https://raw.githubusercontent.com/creationix/nvm/v0.12.0/install.sh | bash
