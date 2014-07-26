@@ -6,6 +6,7 @@
 !/.screenrc
 !/.minttyrc
 !/.vimrc
+!/.ideavimrc
 !/.vim
 /.vim/view/
 /.vim/session/
@@ -16,7 +17,8 @@
 !/.zshrc.unix
 !/.dir_colors
 !/bin
-!/makeLnkToHome.sh
+!/setup.sh
+!/link.sh
 !/.w3m
 !/.tmux.conf
 !/Brewfile
