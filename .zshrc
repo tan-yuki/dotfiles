@@ -232,6 +232,7 @@ alias ls='ls --color'
 alias ll='ls -altr'
 
 # git svn alias
+alias g='git'
 alias gvn='git svn'
 alias gvn-ci='git stash && git svn dcommit && git stash pop'
 alias gvn-up='git svn rebase'

@@ -3,6 +3,10 @@ cd $(dirname $0)
 
 sh ./link.sh
 
+# clone neobundle.vim
+cd .vim/bundle/
+git clone https://github.com/Shougo/neobundle.vim.git
+
 # build xcode command line tool
 xcode-select --install
 
