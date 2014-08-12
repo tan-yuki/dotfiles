@@ -7,6 +7,7 @@
 !/.minttyrc
 !/.vimrc
 !/.gvimrc
+!/.ideavimrc
 !/.vim
 /.vim/view/
 /.vim/session/
@@ -17,7 +18,8 @@
 !/.zshrc.unix
 !/.dir_colors
 !/bin
-!/makeLnkToHome.sh
+!/setup.sh
+!/link.sh
 !/.w3m
 !/.tmux.conf
 !/Brewfile
@@ -29,3 +31,4 @@
 /.vim/bundle/
 !/.vim/bundle/neobundle.vim
 !/.config
+!/.pydistutils.cfg
