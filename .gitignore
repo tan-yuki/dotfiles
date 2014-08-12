@@ -6,6 +6,7 @@
 !/.screenrc
 !/.minttyrc
 !/.vimrc
+!/.gvimrc
 !/.vim
 /.vim/view/
 /.vim/session/

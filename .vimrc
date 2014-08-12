@@ -72,7 +72,7 @@ set ruler
 set cursorline
 
 " - 正規表現
-set regexpengine=0
+" set regexpengine=0
 
 " ==== tabs
 
@@ -110,6 +110,7 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundle 'Align'
 NeoBundle 'AndrewRadev/linediff.vim'
 NeoBundle 'Blackrush/vim-gocode'
+NeoBundle 'koron/codic-vim'
 "NeoBundle 'FuzzyFinder'
 NeoBundle 'L9'
 NeoBundle 'LeafCage/foldCC'
@@ -127,14 +128,14 @@ NeoBundle 'Shougo/vimproc', {
       \    },
       \ }
 NeoBundle 'Shougo/vimshell.vim'
-NeoBundle 'airblade/vim-gitgutter'
+"NeoBundle 'airblade/vim-gitgutter'
 "NeoBundle 'altercation/vim-colors-solarized'
 "NeoBundle 'arnaud-lb/vim-php-namespace'
 "NeoBundle 'bling/vim-airline'
 NeoBundle 'deris/vim-duzzle'
 NeoBundle 'fuenor/qfixgrep'
 NeoBundle 'goldfeld/vim-seek'
-NeoBundle 'gregsexton/gitv'
+"NeoBundle 'gregsexton/gitv'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'hekyou/vim-rectinsert'
 NeoBundle 'hrp/EnhancedCommentify'
@@ -170,6 +171,7 @@ NeoBundle 'vim-scripts/errormarker.vim.git'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'wincent/Command-T'
 NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'mattn/flappyvird-vim'
 NeoBundleCheck
 
 set rtp+=~/.vim/bundle/powerline/bindings/vim

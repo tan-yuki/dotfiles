@@ -9,9 +9,10 @@
 	lg = log --graph --pretty='format:%C(yellow)%h%Cblue%d%Creset %s %C(black bold)%an, %ar%Creset'
     merge = merge --no-ff
 	today = log --oneline --since='12 hour ago' --author='tanaka' --all
+    n = now
 
 [core]
-	excludesfile = /Users/tanaka/.gitignore_global
+	excludesfile = /Users/cw-tanaka/.gitignore_global
 	pager = lv -c
 	autocrlf = false
 	filemode = false
