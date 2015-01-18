@@ -110,14 +110,37 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundle 'Align'
 NeoBundle 'AndrewRadev/linediff.vim'
 NeoBundle 'Blackrush/vim-gocode'
+NeoBundle 'ConradIrwin/vim-bracketed-paste'
+NeoBundle 'dag/vim2hs'
+NeoBundle 'deris/vim-duzzle'
+NeoBundle 'eagletmt/ghcmod-vim'
+NeoBundle 'eagletmt/neco-ghc'
+NeoBundle 'fuenor/qfixgrep'
+NeoBundle 'goldfeld/vim-seek'
+NeoBundle 'groenewege/vim-less'
+NeoBundle 'hekyou/vim-rectinsert'
+NeoBundle 'hrp/EnhancedCommentify'
+NeoBundle 'itchyny/calendar.vim'
+NeoBundle 'jiangmiao/simple-javascript-indenter.git'
+NeoBundle 'kana/vim-submode'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'kmnk/vim-unite-giti'
 NeoBundle 'koron/codic-vim'
-"NeoBundle 'FuzzyFinder'
 NeoBundle 'L9'
 NeoBundle 'LeafCage/foldCC'
-"NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'leafgarland/typescript-vim'
+NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'majutsushi/tagbar'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'mattn/habatobi-vim'
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'mru.vim'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'nono/vim-handlebars'
+NeoBundle 'rhysd/clever-f.vim'
+NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'Shougo/neocomplcache'
-"NeoBundle 'Shougo/neosnippet'
-"NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc', {
       \ 'build' : {
@@ -128,40 +151,11 @@ NeoBundle 'Shougo/vimproc', {
       \    },
       \ }
 NeoBundle 'Shougo/vimshell.vim'
-"NeoBundle 'airblade/vim-gitgutter'
-"NeoBundle 'altercation/vim-colors-solarized'
-"NeoBundle 'arnaud-lb/vim-php-namespace'
-"NeoBundle 'bling/vim-airline'
-NeoBundle 'deris/vim-duzzle'
-NeoBundle 'fuenor/qfixgrep'
-NeoBundle 'goldfeld/vim-seek'
-"NeoBundle 'gregsexton/gitv'
-NeoBundle 'groenewege/vim-less'
-NeoBundle 'hekyou/vim-rectinsert'
-NeoBundle 'hrp/EnhancedCommentify'
-NeoBundle 'itchyny/calendar.vim'
-NeoBundle 'jiangmiao/simple-javascript-indenter.git'
-"NeoBundle 'kana/vim-fakeclip'
-NeoBundle 'kana/vim-submode'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'kmnk/vim-unite-giti'
-NeoBundle 'majutsushi/tagbar'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'mattn/habatobi-vim'
-NeoBundle 'mattn/webapi-vim'
-NeoBundle 'mru.vim'
-NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'nono/vim-handlebars'
-NeoBundle 'rhysd/clever-f.vim'
-NeoBundle 'scrooloose/nerdtree'
-"NeoBundle 'sjl/gundo.vim.git'
-"NeoBundle 'superbrothers/vim-quickrun-markdown-gfm'
 NeoBundle 'surround.vim'
 NeoBundle 'taglist.vim'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thinca/vim-ref'
-"NeoBundle 'thinca/vim-splash'
 NeoBundle 'tomasr/molokai.git'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tyru/open-browser.vim'
@@ -170,8 +164,6 @@ NeoBundle 'vim-scripts/SQLUtilities'
 NeoBundle 'vim-scripts/errormarker.vim.git'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'wincent/Command-T'
-NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'mattn/flappyvird-vim'
 NeoBundleCheck
 
 set rtp+=~/.vim/bundle/powerline/bindings/vim
@@ -188,6 +180,10 @@ if neobundle#exists_not_installed_bundles()
 endif
 
 filetype plugin indent on
+
+" === typescript
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
 
 " ==== neocomplcache
 let g:acp_enableAtStartup = 0
@@ -404,13 +400,14 @@ match ZenkakuSpace /　/
 "auto BufWritePre *.go Fmt
 
 " ==== Define file type
-au BufRead,BufNewFile *.sql  set filetype=sql
-au BufRead,BufNewFile *.case set filetype=html
-au BufRead,BufNewFile *.scss set filetype=sass
-au BufRead,BufNewFile *.vim  set filetype=vim
-au BufRead,BufNewFile *.md   set filetype=markdown
-au BufRead,BufNewFile *.scss set filetype=sass
-au BufRead,BufNewFile *.php  set filetype=php
+au BufRead,BufNewFile *.sql     set filetype=sql
+au BufRead,BufNewFile *.case    set filetype=html
+au BufRead,BufNewFile *.scss    set filetype=sass
+au BufRead,BufNewFile *.vim     set filetype=vim
+au BufRead,BufNewFile *.md      set filetype=markdown
+au BufRead,BufNewFile *.scss    set filetype=sass
+au BufRead,BufNewFile *.php     set filetype=php
+au BufRead,BufNewFile,BufReadPre *.coffee  set filetype=coffee
 
 " ==== Insert template
 autocmd BufNewFile *.php  0r   $HOME/.vim/template/php.txt
