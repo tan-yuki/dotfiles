@@ -26,7 +26,7 @@ compinit -u
 export SHELL=/bin/zsh
 export TMPDIR=/tmp
 export PAGER=less
-export PATH=$HOME/bin:$PATH:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin
+export PATH=$HOME/.cabal/bin:$HOME/bin:$PATH:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin
 export LANG=ja_JP.UTF-8
 export LSCOLORS=exfxcxdxbxegedabagacad
 export JSTESTDRIVER_HOME=$HOME/bin
