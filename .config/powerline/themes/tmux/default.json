@@ -10,10 +10,6 @@
     },
     "segments": {
         "left": [
-            {
-                "name": "branch",
-                "priority": 60
-            }
         ],
         "right": [
             {
