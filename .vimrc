@@ -114,9 +114,34 @@ NeoBundle 'Align'
 NeoBundle 'AndrewRadev/linediff.vim'
 NeoBundle 'Blackrush/vim-gocode'
 NeoBundle 'ConradIrwin/vim-bracketed-paste'
+NeoBundle 'dag/vim2hs'
+NeoBundle 'deris/vim-duzzle'
+NeoBundle 'eagletmt/ghcmod-vim'
+NeoBundle 'eagletmt/neco-ghc'
+NeoBundle 'fuenor/qfixgrep'
+NeoBundle 'goldfeld/vim-seek'
+NeoBundle 'groenewege/vim-less'
+NeoBundle 'hekyou/vim-rectinsert'
+NeoBundle 'hrp/EnhancedCommentify'
+NeoBundle 'jiangmiao/simple-javascript-indenter.git'
+NeoBundle 'kana/vim-submode'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'kmnk/vim-unite-giti'
+NeoBundle 'leafgarland/typescript-vim'
 NeoBundle 'koron/codic-vim'
 NeoBundle 'L9'
 NeoBundle 'LeafCage/foldCC'
+NeoBundle 'leafgarland/typescript-vim'
+NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'majutsushi/tagbar'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'mru.vim'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'nono/vim-handlebars'
+NeoBundle 'rhysd/clever-f.vim'
+NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc', {
@@ -128,25 +153,6 @@ NeoBundle 'Shougo/vimproc', {
       \    },
       \ }
 NeoBundle 'Shougo/vimshell.vim'
-NeoBundle 'deris/vim-duzzle'
-NeoBundle 'fuenor/qfixgrep'
-NeoBundle 'goldfeld/vim-seek'
-NeoBundle 'groenewege/vim-less'
-NeoBundle 'hekyou/vim-rectinsert'
-NeoBundle 'hrp/EnhancedCommentify'
-NeoBundle 'jiangmiao/simple-javascript-indenter.git'
-NeoBundle 'kana/vim-submode'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'kmnk/vim-unite-giti'
-NeoBundle 'leafgarland/typescript-vim'
-NeoBundle 'majutsushi/tagbar'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'mattn/webapi-vim'
-NeoBundle 'mru.vim'
-NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'nono/vim-handlebars'
-NeoBundle 'rhysd/clever-f.vim'
-NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'surround.vim'
 NeoBundle 'taglist.vim'
 NeoBundle 'terryma/vim-multiple-cursors'
@@ -157,7 +163,6 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tyru/vim-altercmd'
 NeoBundle 'vim-scripts/errormarker.vim.git'
 NeoBundle 'wincent/Command-T'
-NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundleCheck
 
 set rtp+=~/.vim/bundle/powerline/bindings/vim
@@ -177,6 +182,10 @@ filetype plugin indent on
 
 " ==== mru
 let g:MRU_Max_Entries = 9999
+
+" === typescript
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
 
 " ==== neocomplcache
 let g:acp_enableAtStartup = 0
@@ -404,6 +413,7 @@ au BufRead,BufNewFile *.scss set filetype=sass
 au BufRead,BufNewFile *.php  set filetype=php
 au BufRead,BufNewFile *.ts   set filetype=typescript
 au BufRead,BufNewFile *.json set filetype=javascript
+au BufRead,BufNewFile,BufReadPre *.coffee  set filetype=coffee
 
 " ==== Insert template
 autocmd BufNewFile *.php  0r   $HOME/.vim/template/php.txt
