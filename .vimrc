@@ -161,7 +161,9 @@ NeoBundle 'thinca/vim-ref'
 NeoBundle 'tomasr/molokai.git'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tyru/vim-altercmd'
+NeoBundle 'ujihisa/ref-hoogle'
 NeoBundle 'vim-scripts/errormarker.vim.git'
+NeoBundle 'vim-scripts/hlint'
 NeoBundle 'wincent/Command-T'
 NeoBundleCheck
 
