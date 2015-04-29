@@ -108,8 +108,9 @@ if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
+NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Align'
 NeoBundle 'AndrewRadev/linediff.vim'
 NeoBundle 'Blackrush/vim-gocode'
@@ -165,6 +166,8 @@ NeoBundle 'ujihisa/ref-hoogle'
 NeoBundle 'vim-scripts/errormarker.vim.git'
 NeoBundle 'vim-scripts/hlint'
 NeoBundle 'wincent/Command-T'
+call neobundle#begin(expand('~/.vim/bundle/'))
+
 NeoBundleCheck
 
 set rtp+=~/.vim/bundle/powerline/bindings/vim
