@@ -166,7 +166,7 @@ NeoBundle 'ujihisa/ref-hoogle'
 NeoBundle 'vim-scripts/errormarker.vim.git'
 NeoBundle 'vim-scripts/hlint'
 NeoBundle 'wincent/Command-T'
-call neobundle#begin(expand('~/.vim/bundle/'))
+call neobundle#end()
 
 NeoBundleCheck
 
@@ -602,6 +602,6 @@ nnoremap gj  j
 vnoremap gk  k
 vnoremap gj  j
 
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+"python from powerline.vim import setup as powerline_setup
+"python powerline_setup()
+"python del powerline_setup
