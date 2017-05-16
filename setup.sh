@@ -1,4 +1,6 @@
 #!/bin/sh
+brew tap Homebrew/brewdler
+
 cd $(dirname $0)
 
 sh ./link.sh
@@ -18,21 +20,3 @@ curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.s
 
 # setup bundles
 brew bundle
-
-# setup python
-pip install --upgrade setuptools
-pip install --upgrade pip
-
-# setup powerline
-pip install --user psutil
-pip install --user git+git://github.com/Lokaltog/powerline
-
-# setup nvm
-curl https://raw.githubusercontent.com/creationix/nvm/v0.12.0/install.sh | bash
-sh ~/.nvm/install.sh
-
-# install node
-nvm install v0.10.29
-
-# setup npm
-curl -L https://npmjs.org/install.sh | sh

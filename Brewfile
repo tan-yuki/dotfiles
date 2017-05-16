@@ -1,66 +1,46 @@
-# Update homebrew
-update
-
-# Upgrade already-installed packages
-upgrade
-
-# Add repositories
-tap peco/peco
 # Install brew-packages
-install tmux
-install python
-install reattach-to-user-namespace
-install zsh
-install vim
-install ack
-install bash
-install binutils
-install boost
-install coreutils
-install ctags
-install findutils
-install gawk
-install ghc
-install ghostscript
-install git-flow
-install gnu-indent
-install gnu-sed
-install gnu-tar
-install gnu-which
-install gnutls
-install go
-install imagemagick
-install jasper
-install jenkins
-install js-test-driver
-install libxslt
-install libyaml
-install little-cms
-install lv
-install mcrypt
-install memcached
-install mercurial
-install mongodb
-install mysql
-install newt
-install optipng
-install p11-kit
-install peco
-install phantomjs
-install pidof
-install postgresql
-install qt
-install rbenv
-install reattach-to-user-namespace
-install ruby-build
-install the_silver_searcher
-install tig
-install tree
-install unixodbc
-install w3m
-install watch
-install wget
-install z
-
-# Remove outdated version
-cleanup
+brew "tmux"
+brew "python"
+brew "reattach-to-user-namespace"
+brew "zsh"
+brew "vim"
+brew "ack"
+brew "bash"
+brew "binutils"
+brew "boost"
+brew "coreutils"
+brew "ctags"
+brew "findutils"
+brew "gawk"
+brew "ghostscript"
+brew "gnu-indent"
+brew "gnu-sed"
+brew "gnu-tar"
+brew "gnu-which"
+brew "gnutls"
+brew "jasper"
+brew "libxslt"
+brew "libyaml"
+brew "little-cms"
+brew "lv"
+brew "mcrypt"
+brew "mysql"
+brew "newt"
+brew "optipng"
+brew "p11-kit"
+brew "peco"
+brew "phantomjs"
+brew "pidof"
+brew "postgresql"
+brew "qt"
+brew "rbenv"
+brew "reattach-to-user-namespace"
+brew "ruby-build"
+brew "the_silver_searcher"
+brew "tig"
+brew "tree"
+brew "unixodbc"
+brew "w3m"
+brew "watch"
+brew "wget"
+brew "z"
