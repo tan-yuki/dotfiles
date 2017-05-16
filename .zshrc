@@ -176,7 +176,8 @@ setopt numeric_glob_sort
 setopt magic_equal_subst
 ## 拡張globを有効にする。
 ## glob中で「(#...)」という書式で指定する。
-setopt extended_glob
+#setopt extended_glob <- git reset HEAD^が聞かないのでコメントアウト
+# 参考: http://d.hatena.ne.jp/supermassiveblackhole/20100820/1282284495
 ## globでパスを生成したときに、パスがディレクトリだったら最後に「/」をつける。
 setopt mark_dirs
 
