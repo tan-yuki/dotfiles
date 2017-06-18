@@ -601,7 +601,3 @@ nnoremap gk  k
 nnoremap gj  j
 vnoremap gk  k
 vnoremap gj  j
-
-"python from powerline.vim import setup as powerline_setup
-"python powerline_setup()
-"python del powerline_setup
