@@ -180,12 +180,6 @@ setopt magic_equal_subst
 # 参考: http://d.hatena.ne.jp/supermassiveblackhole/20100820/1282284495
 ## globでパスを生成したときに、パスがディレクトリだったら最後に「/」をつける。
 setopt mark_dirs
-
-localize_file="${HOME}/.zshrc.local"
-if [ -f ${localize_file} ]; then
-	source ${localize_file}
-fi
-
 # tmux solarized
 set -g default-terminal "screen-256color"
 
@@ -250,3 +244,9 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="~/Library/Python/2.7/bin:$PATH"
+
+localize_file="${HOME}/.zshrc.local"
+if [ -f ${localize_file} ]; then
+	source ${localize_file}
+fi
+
