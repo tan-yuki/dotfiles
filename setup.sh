@@ -30,3 +30,6 @@ cd fonts
 ./install.sh
 cd ../
 rm -rf fonts
+
+# setup for `gibo`
+git clone https://github.com/github/gitignore ~/.gitignore-boilerplates
