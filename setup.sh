@@ -31,5 +31,8 @@ cd fonts
 cd ../
 rm -rf fonts
 
+# setup for `z`
+touch $HOME/.z
+
 # setup for `gibo`
 git clone https://github.com/github/gitignore ~/.gitignore-boilerplates
