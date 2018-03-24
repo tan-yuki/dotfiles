@@ -105,6 +105,9 @@ nnoremap [Tag]l  :tabs<CR>
 filetype off
 
 if has('vim_starting')
+  if isdirectory(expand('~/dotfiles'))
+    set runtimepath+=~/dotfiles/.vim/
+  endif
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
