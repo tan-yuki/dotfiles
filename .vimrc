@@ -100,93 +100,59 @@ nnoremap [Tag]l  :tabs<CR>
 " ======= Each plugins ======
 " ===========================
 
+call plug#begin('~/.vim/plugged')
+Plug 'vim-scripts/Align'
+Plug 'AndrewRadev/linediff.vim'
+Plug 'Blackrush/vim-gocode'
+Plug 'ConradIrwin/vim-bracketed-paste'
+Plug 'dag/vim2hs'
+Plug 'deris/vim-duzzle'
+Plug 'eagletmt/ghcmod-vim'
+Plug 'eagletmt/neco-ghc'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'fuenor/qfixgrep'
+Plug '/usr/local/opt/fzf'
+Plug 'goldfeld/vim-seek'
+Plug 'groenewege/vim-less'
+Plug 'hekyou/vim-rectinsert'
+Plug 'hrp/EnhancedCommentify'
+Plug 'kana/vim-submode'
+Plug 'kmnk/vim-unite-giti'
+Plug 'leafgarland/typescript-vim'
+Plug 'koron/codic-vim'
+Plug 'vim-scripts/L9'
+Plug 'LeafCage/foldCC'
+Plug 'leafgarland/typescript-vim'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'majutsushi/tagbar'
+Plug 'mattn/emmet-vim'
+Plug 'mattn/webapi-vim'
+Plug 'mileszs/ack.vim'
+Plug 'vim-scripts/mru.vim'
+Plug 'nono/vim-handlebars'
+Plug 'rhysd/clever-f.vim'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'Shougo/neocomplcache'
+Plug 'Shougo/unite.vim'
+Plug 'Shougo/vimproc', { 'do': 'make' }
+Plug 'Shougo/vimshell.vim'
+Plug 'vim-scripts/surround.vim'
+Plug 'vim-scripts/taglist.vim'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'thinca/vim-quickrun'
+Plug 'thinca/vim-ref'
+Plug 'tomasr/molokai'
+Plug 'tpope/vim-fugitive'
+Plug 'tyru/vim-altercmd'
+Plug 'ujihisa/ref-hoogle'
+Plug 'vim-scripts/errormarker.vim'
+Plug 'vim-scripts/hlint'
+Plug 'wincent/Command-T'
+call plug#end()
 
-" ==== neobundle
-filetype off
-
-if has('vim_starting')
-  if isdirectory(expand('~/dotfiles'))
-    set runtimepath+=~/dotfiles/.vim/
-  endif
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'Align'
-NeoBundle 'AndrewRadev/linediff.vim'
-NeoBundle 'Blackrush/vim-gocode'
-NeoBundle 'ConradIrwin/vim-bracketed-paste'
-NeoBundle 'dag/vim2hs'
-NeoBundle 'deris/vim-duzzle'
-NeoBundle 'eagletmt/ghcmod-vim'
-NeoBundle 'eagletmt/neco-ghc'
-NeoBundle 'editorconfig/editorconfig-vim'
-NeoBundle 'fuenor/qfixgrep'
-NeoBundle 'goldfeld/vim-seek'
-NeoBundle 'groenewege/vim-less'
-NeoBundle 'hekyou/vim-rectinsert'
-NeoBundle 'hrp/EnhancedCommentify'
-NeoBundle 'jiangmiao/simple-javascript-indenter.git'
-NeoBundle 'kana/vim-submode'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'kmnk/vim-unite-giti'
-NeoBundle 'leafgarland/typescript-vim'
-NeoBundle 'koron/codic-vim'
-NeoBundle 'L9'
-NeoBundle 'LeafCage/foldCC'
-NeoBundle 'leafgarland/typescript-vim'
-NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'majutsushi/tagbar'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'mattn/webapi-vim'
-NeoBundle 'mru.vim'
-NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'nono/vim-handlebars'
-NeoBundle 'rhysd/clever-f.vim'
-NeoBundle 'rking/ag.vim'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/vimproc', {
-      \ 'build' : {
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
-      \     'windows' : 'make -f make_mingw32.mak',
-      \    },
-      \ }
-NeoBundle 'Shougo/vimshell.vim'
-NeoBundle 'surround.vim'
-NeoBundle 'taglist.vim'
-NeoBundle 'terryma/vim-multiple-cursors'
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'thinca/vim-ref'
-NeoBundle 'tomasr/molokai.git'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tyru/vim-altercmd'
-NeoBundle 'ujihisa/ref-hoogle'
-NeoBundle 'vim-scripts/errormarker.vim.git'
-NeoBundle 'vim-scripts/hlint'
-NeoBundle 'wincent/Command-T'
-call neobundle#end()
-
-NeoBundleCheck
 
 set rtp+=~/.vim/bundle/powerline/bindings/vim
 set noshowmode
-
-filetype plugin indent on
-
-" Installation check.
-if neobundle#exists_not_installed_bundles()
-  echomsg 'Not installed bundles : ' .
-        \ string(neobundle#get_not_installed_bundle_names())
-  echomsg 'Please execute ":NeoBundleInstall" command.'
-  "finish
-endif
 
 filetype plugin indent on
 
@@ -400,6 +366,9 @@ let g:airline_theme="dark"
 " ===== easymotion
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
+
+" ===== fzf
+set rtp+=/usr/local/opt/fzf
 
 " ========================
 " ======= Some Tips ======

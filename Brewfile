@@ -1,4 +1,5 @@
 # Install brew-packages
+tap 'caskroom/cask'
 brew "tmux"
 brew "python"
 brew "reattach-to-user-namespace"
@@ -45,3 +46,4 @@ brew "watch"
 brew "wget"
 brew "z"
 brew "gibo"
+brew "fzf"

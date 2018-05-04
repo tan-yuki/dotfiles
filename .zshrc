@@ -260,3 +260,6 @@ if [ -f ${localize_file} ]; then
 	source ${localize_file}
 fi
 
+
+# setting for `fzf`
+$(brew --prefix)/opt/fzf/install
