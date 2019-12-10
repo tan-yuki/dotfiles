@@ -111,7 +111,6 @@ Plug 'eagletmt/ghcmod-vim'
 Plug 'eagletmt/neco-ghc'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fuenor/qfixgrep'
-Plug '/usr/local/opt/fzf'
 Plug 'goldfeld/vim-seek'
 Plug 'groenewege/vim-less'
 Plug 'hekyou/vim-rectinsert'
@@ -366,9 +365,6 @@ let g:airline_theme="dark"
 " ===== easymotion
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
-
-" ===== fzf
-set rtp+=/usr/local/opt/fzf
 
 " ========================
 " ======= Some Tips ======

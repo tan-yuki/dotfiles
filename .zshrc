@@ -224,8 +224,6 @@ if [ -f ${localize_file} ]; then
 fi
 
 
-# setting for `fzf`
-$(brew --prefix)/opt/fzf/install
 
 # for k8s
 source <(kubectl completion zsh)

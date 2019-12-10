@@ -52,12 +52,6 @@ see) https://github.com/powerline/fonts
 touch $HOME/.z
 ```
 
-# Setting for `fzf`
-
-```
-$(brew --prefix)/opt/fzf/install
-```
-
 # Install nerd font
 
 See: https://github.com/ryanoasis/nerd-fonts
