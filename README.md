@@ -52,12 +52,6 @@ see) https://github.com/powerline/fonts
 touch $HOME/.z
 ```
 
-# Setup for `gibo`
-
-```sh
-git clone https://github.com/github/gitignore ~/.gitignore-boilerplates
-```
-
 # Setting for `fzf`
 
 ```

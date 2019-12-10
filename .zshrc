@@ -263,3 +263,5 @@ fi
 
 # setting for `fzf`
 $(brew --prefix)/opt/fzf/install
+
+function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
