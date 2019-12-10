@@ -15,10 +15,12 @@ fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
 # The following lines were added by compinstall
 zstyle :compinstall filename "${HOME}/.zshrc"
 
-# 補完
-## 初期化
-autoload -U compinit
-compinit -u
+# autoload
+autoload -Uz compinit && compinit -u
+autoload -Uz vcs_info
+autoload -Uz add-zsh-hook
+autoload -Uz colors && colors
+
 
 # End of lines added by compinstall
 
@@ -31,20 +33,6 @@ export LANG=ja_JP.UTF-8
 export LSCOLORS=exfxcxdxbxegedabagacad
 export JSTESTDRIVER_HOME=$HOME/bin
 export VIMHOME=$HOME/.vim/
-
-
-
-# custom_color.sh
-autoload colors
-colors
-
-##### git settings
-
-# Auto completin settings
-# source /usr/local/git/contrib/completion/git-completion.bash
-# GIT_PS1_SHOWDIRTYSTATE=true
-# export PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
-
 
 # git editor
 export GIT_EDITOR="vim"
@@ -95,27 +83,43 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 
 ### Prompt Setting
-function rprompt-git-current-branch {
-  local name st color
 
-  if [[ "$PWD" =~ '/\.git(/.*)?$' ]]; then
-          return
-  fi
-  name=`git symbolic-ref HEAD 2> /dev/null`
-  name=`echo $name | sed -e 's,refs/heads/,,g'`
-  if [[ -z $name ]]; then
-          return
-  fi
-  color=${fg[green]}
+# git
+setopt prompt_subst
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
+zstyle ':vcs_info:git:*' unstagedstr "%F{magenta}+"
+zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
+zstyle ':vcs_info:*' actionformats '[%b|%a]'
 
-  # %{...%} は囲まれた文字列がエスケープシーケンスであることを明示する
-  # これをしないと右プロンプトの位置がずれる
-  echo "%{$color%}($name)%{$reset_color%} "
+# kubernetes
+function _kube-current-context () {
+  KUBE_PS1_CONTEXT=$(kubectl config current-context)
 }
-PROMPT="%{${fg[green]}%}[%n@macbook] %%%{${reset_color}%} "
-RPROMPT="%{${fg[yellow]}%}[`rprompt-git-current-branch`%{${fg[yellow]}%}%~]%{${reset_color}%}"
+_kube-current-context
+
+# precmd
 precmd() {
-  RPROMPT="%{${fg[yellow]}%}[`rprompt-git-current-branch`%{${fg[yellow]}%}%~]%{${reset_color}%}"
+  _kube-current-context
+  vcs_info
+
+  # 1行あける
+  print
+
+  local top_left="[%~]"
+  local top_right="⎈  (${KUBE_PS1_CONTEXT})"
+  local top_left_width=${#${(S%%)top_left}}
+  local top_right_width=${#${(S%%)top_right}}
+  local padwidth=$(($COLUMNS - ($top_left_width + $top_right_width) % $COLUMNS - 3))
+
+  print -P "➦ ${fg[yellow]}$top_left${reset_color}"${(r:$padwidth:: :)}"${fg[cyan]}$top_right${reset_color}"
+}
+
+# prompt
+PROMPT="➥ %{${fg[green]}%}[%n@macbook] %%%{${reset_color}%} "
+RPROMPT='${vcs_info_msg_0_}'
+TRAPALRM() {
+  zle reset-prompt
 }
 
 
@@ -183,54 +187,13 @@ setopt mark_dirs
 # tmux solarized
 set -g default-terminal "screen-256color"
 
-export GOHOME=$(brew --prefix go)
-export GOROOT=$GOHOME/libexec
-export GOPATH=$GOHOME/_go
-export PATH=$PATH:$GOROOT/bin
-
-# cd で移動後に実行
-# chpwd() {
-#     ls
-# }
-
-function do_enter() {
-    if [ -n "$BUFFER" ]; then
-        zle accept-line
-        return 0
-    fi
-    echo
-    ls
-    if [ "$(git rev-parse --is-inside-work-tree 2> /dev/null)" = 'true' ]; then
-        echo
-        echo -e "\e[0;33m--- git status ---\e[0m"
-        git status -sb
-    fi
-    zle reset-prompt
-    return 0
-}
-zle -N do_enter
-bindkey '^m' do_enter
 
 alias dirs='dirs -p'
 alias gvim='open /Applications/MacVim.app'
 
-# git alias
-alias st='git st'
-alias df='git df'
-alias add='git add'
-alias ci='git commit'
-alias push='git push'
-alias pull='git pull'
-alias stash='git stash'
-alias co='git checkout'
+# ls
 alias ls='ls --color'
 alias ll='ls -altr'
-
-# git svn alias
-alias g='git'
-alias gvn='git svn'
-alias gvn-ci='git stash && git svn dcommit && git stash pop'
-alias gvn-up='git svn rebase'
 
 # vim
 alias vi='vim'
@@ -264,4 +227,6 @@ fi
 # setting for `fzf`
 $(brew --prefix)/opt/fzf/install
 
+# for k8s
+source <(kubectl completion zsh)
 function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
