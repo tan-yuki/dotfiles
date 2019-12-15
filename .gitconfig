@@ -25,7 +25,7 @@
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [user]
-	name = tanaka
-	email = tanaka@chatwork.co.jp
+	name = tan-yuki
+	email = a0673040@gmail.com
 [color]
 	ui = false
