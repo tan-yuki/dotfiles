@@ -236,4 +236,3 @@ fi
 
 # Powerline
 export POWERLINE_HOME=~/.local/lib/python3.7/site-packages/powerline
-source ${POWERLINE_HOME}/bindings/zsh/powerline.zsh
