@@ -28,10 +28,30 @@ brew bundle
 
 exec vim, and `:PlugInstall`
 
-# Setup powerline
+# Setup for `z`
 
 ```sh
-pip install --user powerline-status
+touch $HOME/.z
+```
+
+# Install nerd font
+
+See: https://github.com/ryanoasis/nerd-fonts
+
+# Install pyenv
+
+```
+brew install pyenv
+pyenv install 3.7.5
+pyenv global 3.7.5
+pyenv rehash
+```
+
+# Install powerline
+
+```
+pip install powerline-status
+pip install --user git+git://github.com/powerline/powerline
 ```
 
 ## Install powerline font
@@ -46,12 +66,3 @@ rm -rf fonts
 
 see) https://github.com/powerline/fonts
 
-# Setup for `z`
-
-```sh
-touch $HOME/.z
-```
-
-# Install nerd font
-
-See: https://github.com/ryanoasis/nerd-fonts
