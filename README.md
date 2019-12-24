@@ -26,7 +26,14 @@ brew bundle
 
 # Install vim-plug
 
-exec vim, and `:PlugInstall`
+```
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+then, exec vim, and `:PlugInstall`
+
+see: https://github.com/junegunn/vim-plug
 
 # Setup for `z`
 
