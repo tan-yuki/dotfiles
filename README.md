@@ -33,7 +33,7 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 
 then, exec vim, and `:PlugInstall`
 
-see: https://github.com/junegunn/vim-plug
+see) https://github.com/junegunn/vim-plug
 
 # Setup for `z`
 
@@ -43,7 +43,7 @@ touch $HOME/.z
 
 # Install nerd font
 
-See: https://github.com/ryanoasis/nerd-fonts
+see) https://github.com/ryanoasis/nerd-fonts
 
 # Install pyenv
 
@@ -61,6 +61,8 @@ pip install powerline-status
 pip install --user git+git://github.com/powerline/powerline
 ```
 
+see) https://powerline.readthedocs.io/en/latest/installation.html
+
 ## Install powerline font
 
 ```sh
@@ -73,3 +75,11 @@ rm -rf fonts
 
 see) https://github.com/powerline/fonts
 
+
+## Install kubectl
+
+```
+brew install kubernetes-cli
+```
+
+see) https://kubernetes.io/ja/docs/tasks/tools/install-kubectl/
