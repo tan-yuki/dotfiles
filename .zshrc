@@ -206,7 +206,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export PATH="~/Library/Python/2.7/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -223,8 +222,17 @@ if [ -f ${localize_file} ]; then
 	source ${localize_file}
 fi
 
-
-
 # for k8s
 source <(kubectl completion zsh)
 function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
+
+# Pyenv
+export PYENV_ROOT=${HOME}/.pyenv
+export PATH=$PATH:$HOME/.local/bin
+if [ -d "${PYENV_ROOT}" ]; then
+    export PATH=${PYENV_ROOT}/bin:$PATH
+    eval "$(pyenv init -)"
+fi
+
+# Powerline
+export POWERLINE_HOME=~/.local/lib/python3.7/site-packages/powerline
