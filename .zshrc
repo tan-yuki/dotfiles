@@ -228,11 +228,11 @@ function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
 
 # Pyenv
 export PYENV_ROOT=${HOME}/.pyenv
-export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/Library/Python/3.7/bin
 if [ -d "${PYENV_ROOT}" ]; then
     export PATH=${PYENV_ROOT}/bin:$PATH
     eval "$(pyenv init -)"
 fi
 
 # Powerline
-export POWERLINE_HOME=~/.local/lib/python3.7/site-packages/powerline
+export POWERLINE_HOME=$HOME/Library/Python/3.7/lib/python/site-packages/powerline
