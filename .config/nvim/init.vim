@@ -37,7 +37,7 @@ colorscheme gruvbox
 " NERDTree
 "===================
 let g:NERDTreeGitStatusWithFlags = 1
-let g:NERDTreeIgnore = ['^node_modules$', '^.git$']
+let g:NERDTreeIgnore = ['^.git$']
 nnoremap nt :NERDTree<CR>
 nmap <C-n> :NERDTreeToggle<CR>
 
