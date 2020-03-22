@@ -196,7 +196,7 @@ alias ls='ls --color'
 alias ll='ls -altr'
 
 # vim
-alias vi='vim'
+alias vi='nvim'
 
 # tmux
 alias tmux="tmux -2"
