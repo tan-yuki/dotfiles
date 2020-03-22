@@ -224,7 +224,7 @@ fi
 
 # for k8s
 source <(kubectl completion zsh)
-function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
+function gi() { curl -sL https://www.gitignore.io/api/$@ ;}
 
 # Pyenv
 export PYENV_ROOT=${HOME}/.pyenv
