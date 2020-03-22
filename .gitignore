@@ -12,6 +12,8 @@
 !/.vim
 /.vim/view/
 /.vim/session/
+/.vim/plugged/
+/.vim/autoload/plug.vim
 !/.zshrc
 !/.zsh
 !/.zshrc.cygwin
@@ -32,4 +34,7 @@
 /.vim/bundle/
 !/.vim/bundle/neobundle.vim
 !/.config
+/.config/configstore
+/.config/coc
+/.config/gh
 !/.pydistutils.cfg
