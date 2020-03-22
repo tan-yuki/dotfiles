@@ -46,6 +46,7 @@ nmap <C-n> :NERDTreeToggle<CR>
 "===================
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
+let NERDTreeShowHidden = 1
 
 "===================
 " ctrlp
