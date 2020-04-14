@@ -24,8 +24,10 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'tpope/vim-fugitive'
 Plug 'vim-scripts/mru.vim'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+
 call plug#end()
 
 "===================
