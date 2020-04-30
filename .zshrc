@@ -32,10 +32,9 @@ export PATH=$HOME/.cabal/bin:$HOME/bin:$PATH:/usr/local/sbin:/usr/sbin:/sbin:/us
 export LANG=ja_JP.UTF-8
 export LSCOLORS=exfxcxdxbxegedabagacad
 export JSTESTDRIVER_HOME=$HOME/bin
-export VIMHOME=$HOME/.vim/
 
 # git editor
-export GIT_EDITOR="vim"
+export GIT_EDITOR="vi"
 
 # when use "cd", pushd automatically
 setopt auto_pushd
@@ -197,6 +196,7 @@ alias ll='ls -altr'
 
 # vim
 alias vi='nvim'
+alias vim='nvim'
 
 # tmux
 alias tmux="tmux -2"
