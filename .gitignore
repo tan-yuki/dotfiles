@@ -4,8 +4,6 @@
 !/.gitconfig
 !/.gitignore
 !/.inputrc
-!/.screenrc
-!/.minttyrc
 !/.vimrc
 !/.gvimrc
 !/.ideavimrc
@@ -16,14 +14,12 @@
 /.vim/autoload/plug.vim
 !/.zshrc
 !/.zsh
-!/.zshrc.cygwin
 !/.ctags
 !/.zshrc.unix
 !/.dir_colors
 !/bin
 !/setup.sh
 !/link.sh
-!/.w3m
 !/.tmux.conf
 !/Brewfile
 !/antigen
@@ -37,4 +33,3 @@
 /.config/configstore
 /.config/coc
 /.config/gh
-!/.pydistutils.cfg
