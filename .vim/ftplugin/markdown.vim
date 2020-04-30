@@ -1,1 +1,0 @@
-autocmd BufWritePre * :QuickRun markdown
