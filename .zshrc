@@ -34,7 +34,7 @@ export LSCOLORS=exfxcxdxbxegedabagacad
 export JSTESTDRIVER_HOME=$HOME/bin
 
 # git editor
-export GIT_EDITOR="vi"
+export GIT_EDITOR="nvim"
 
 # when use "cd", pushd automatically
 setopt auto_pushd
