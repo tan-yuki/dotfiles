@@ -32,10 +32,9 @@ export PATH=$HOME/.cabal/bin:$HOME/bin:$PATH:/usr/local/sbin:/usr/sbin:/sbin:/us
 export LANG=ja_JP.UTF-8
 export LSCOLORS=exfxcxdxbxegedabagacad
 export JSTESTDRIVER_HOME=$HOME/bin
-export VIMHOME=$HOME/.vim/
 
 # git editor
-export GIT_EDITOR="vim"
+export GIT_EDITOR="vi"
 
 # when use "cd", pushd automatically
 setopt auto_pushd
@@ -196,7 +195,8 @@ alias ls='ls --color'
 alias ll='ls -altr'
 
 # vim
-alias vi='vim'
+alias vi='nvim'
+alias vim='nvim'
 
 # tmux
 alias tmux="tmux -2"
@@ -224,15 +224,15 @@ fi
 
 # for k8s
 source <(kubectl completion zsh)
-function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
+function gi() { curl -sL https://www.gitignore.io/api/$@ ;}
 
 # Pyenv
 export PYENV_ROOT=${HOME}/.pyenv
-export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/Library/Python/3.7/bin
 if [ -d "${PYENV_ROOT}" ]; then
     export PATH=${PYENV_ROOT}/bin:$PATH
     eval "$(pyenv init -)"
 fi
 
 # Powerline
-export POWERLINE_HOME=~/.local/lib/python3.7/site-packages/powerline
+export POWERLINE_HOME=$HOME/Library/Python/3.7/lib/python/site-packages/powerline
