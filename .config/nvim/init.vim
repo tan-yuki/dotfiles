@@ -32,6 +32,7 @@ Plug 'Shougo/defx.nvim'
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'kristijanhusak/defx-icons'
+Plug 'kristijanhusak/defx-git'
 " -------------------------
 
 call plug#end()
@@ -142,7 +143,7 @@ call defx#custom#option('_', {
   \ 'buffer_name': 'exlorer',
   \ 'toggle': 1,
   \ 'resume': 1,
-  \ 'columns': 'indent:icons:filename:mark',
+  \ 'columns': 'indent:git:icons:filename:mark',
   \ })
 
 call defx#custom#column('git', 'indicators', {
