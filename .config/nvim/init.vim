@@ -8,7 +8,10 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set encoding=UTF-8
+
+" yank to clipboard
 set clipboard+=unnamedplus
+
 set list
 set listchars=tab:>.
 
