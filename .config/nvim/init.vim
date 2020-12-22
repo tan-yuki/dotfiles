@@ -20,6 +20,7 @@ set listchars=tab:>.
 "==============
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'airblade/vim-gitgutter'
+Plug 'cespare/vim-toml'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 Plug 'morhetz/gruvbox'

@@ -33,3 +33,4 @@
 /.config/configstore
 /.config/coc
 /.config/gh
+/.config/nvim/.netrwhist
