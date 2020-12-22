@@ -15,6 +15,7 @@
   pager = lv -c
   autocrlf = false
   filemode = false
+  ignorecase = false
 [diff]
   tool = vimdiff
 [user]
