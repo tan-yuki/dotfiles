@@ -43,6 +43,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Shougo/neomru.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'thinca/vim-quickrun'
 
 if has('nvim')
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -71,6 +72,11 @@ nmap ++ <plug>NERDCommenterToggle
 " ctrlp
 "===================
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+" 
+autocmd BufNewFile,BufRead *.crs setf rust
+autocmd BufNewFile,BufRead *.rs  let g:quickrun_config.rust = {'exec' : 'cargo run'}
+autocmd BufNewFile,BufRead *.crs let g:quickrun_config.rust = {'exec' : 'cargo script %s -- %a'}
 
 "===================
 " defx
