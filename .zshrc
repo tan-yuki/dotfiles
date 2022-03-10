@@ -95,18 +95,19 @@ zstyle ':vcs_info:*' actionformats '[%b|%a]'
 function _kube-current-context () {
   KUBE_PS1_CONTEXT=$(kubectl config current-context)
 }
-_kube-current-context
+# _kube-current-context
 
 # precmd
 precmd() {
-  _kube-current-context
+  # _kube-current-context
   vcs_info
 
   # 1行あける
   print
 
   local top_left="[%~]"
-  local top_right="⎈  (${KUBE_PS1_CONTEXT})"
+  # local top_right="⎈  (${KUBE_PS1_CONTEXT})"
+  local top_right=""
   local top_left_width=${#${(S%%)top_left}}
   local top_right_width=${#${(S%%)top_right}}
   local padwidth=$(($COLUMNS - ($top_left_width + $top_right_width) % $COLUMNS - 3))
@@ -228,11 +229,10 @@ function gi() { curl -sL https://www.gitignore.io/api/$@ ;}
 
 # Pyenv
 export PYENV_ROOT=${HOME}/.pyenv
-export PATH=$PATH:$HOME/Library/Python/3.7/bin
 if [ -d "${PYENV_ROOT}" ]; then
-    export PATH=${PYENV_ROOT}/bin:$PATH
+    export PATH=${PYENV_ROOT}/shims:$PATH
     eval "$(pyenv init -)"
 fi
 
 # Powerline
-export POWERLINE_HOME=$HOME/Library/Python/3.7/lib/python/site-packages/powerline
+export POWERLINE_HOME="$(pyenv root)/versions/$(pyenv version-name)/lib/python3.7/site-packages/powerline"

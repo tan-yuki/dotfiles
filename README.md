@@ -45,8 +45,8 @@ see) https://github.com/ryanoasis/nerd-fonts
 
 ```
 brew install pyenv
-pyenv install 3.7.5
-pyenv global 3.7.5
+pyenv install 3.7.12
+pyenv global 3.7.12
 pyenv rehash
 ```
 
