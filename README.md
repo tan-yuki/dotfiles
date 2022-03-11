@@ -50,6 +50,17 @@ pyenv global 3.7.12
 pyenv rehash
 ```
 
+※) neovimがpyenv前提のため、asdf経由ではなくpyenv経由でpythonをセットアップする
+
+# Setup asdf
+
+## nodejs
+
+```
+asdf plugin add nodejs
+asdf install nodejs 17.6.0
+```
+
 # Install powerline
 
 ```

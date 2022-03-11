@@ -234,5 +234,8 @@ if [ -d "${PYENV_ROOT}" ]; then
     eval "$(pyenv init -)"
 fi
 
+# asdf
+. $(brew --prefix asdf)/asdf.sh
+
 # Powerline
 export POWERLINE_HOME="$(pyenv root)/versions/$(pyenv version-name)/lib/python3.7/site-packages/powerline"
