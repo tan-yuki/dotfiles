@@ -227,15 +227,15 @@ fi
 source <(kubectl completion zsh)
 function gi() { curl -sL https://www.gitignore.io/api/$@ ;}
 
+# asdf
+. $(brew --prefix asdf)/asdf.sh
+
 # Pyenv
 export PYENV_ROOT=${HOME}/.pyenv
 if [ -d "${PYENV_ROOT}" ]; then
     export PATH=${PYENV_ROOT}/shims:$PATH
     eval "$(pyenv init -)"
 fi
-
-# asdf
-. $(brew --prefix asdf)/asdf.sh
 
 # Powerline
 export POWERLINE_HOME="$(pyenv root)/versions/$(pyenv version-name)/lib/python3.7/site-packages/powerline"
