@@ -1,10 +1,8 @@
-## Create dotfiles symlinks
+# Create dotfiles symlinks
 
 ```sh
 sh ./link.sh
 ```
-
-## Build xcode command line tool
 
 # Install brew
 
