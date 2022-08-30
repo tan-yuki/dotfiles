@@ -6,10 +6,6 @@ sh ./link.sh
 
 ## Build xcode command line tool
 
-```sh
-xcode-select --install
-```
-
 # Install brew
 
 https://docs.brew.sh/Installation
@@ -18,6 +14,15 @@ https://docs.brew.sh/Installation
 
 ```sh
 brew bundle
+```
+
+# Setup asdf
+
+## nodejs
+
+```
+asdf plugin add nodejs
+asdf install nodejs 17.6.0
 ```
 
 # Install vim-plug
@@ -31,11 +36,6 @@ then, exec vim, and `:PlugInstall`
 
 see) https://github.com/junegunn/vim-plug
 
-# Setup for `z`
-
-```sh
-touch $HOME/.z
-```
 
 # Install nerd font
 
@@ -52,20 +52,10 @@ pyenv rehash
 
 ※) neovimがpyenv前提のため、asdf経由ではなくpyenv経由でpythonをセットアップする
 
-# Setup asdf
-
-## nodejs
-
-```
-asdf plugin add nodejs
-asdf install nodejs 17.6.0
-```
-
 # Install powerline
 
 ```
 pip install powerline-status
-pip install --user git+git://github.com/powerline/powerline
 ```
 
 see) https://powerline.readthedocs.io/en/latest/installation.html
@@ -81,12 +71,3 @@ rm -rf fonts
 ```
 
 see) https://github.com/powerline/fonts
-
-
-## Install kubectl
-
-```
-brew install kubernetes-cli
-```
-
-see) https://kubernetes.io/ja/docs/tasks/tools/install-kubectl/
