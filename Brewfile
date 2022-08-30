@@ -1,5 +1,6 @@
 # Install brew-packages
 tap 'homebrew/cask'
+tap 'homebrew/cask-fonts'
 brew "ag"
 brew "asdf"
 brew "binutils"

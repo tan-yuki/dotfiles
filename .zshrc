@@ -1,3 +1,9 @@
+# local .zshrc
+localize_file="${HOME}/.zshrc.local"
+if [ -f ${localize_file} ]; then
+	source ${localize_file}
+fi
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=9999
@@ -216,11 +222,6 @@ export NVM_DIR="$HOME/.nvm"
 if command -v brew >/dev/null 2>&1; then
   # Load rupa's z if installed
   [ -f $(brew --prefix)/etc/profile.d/z.sh ] && source $(brew --prefix)/etc/profile.d/z.sh
-fi
-
-localize_file="${HOME}/.zshrc.local"
-if [ -f ${localize_file} ]; then
-	source ${localize_file}
 fi
 
 # for k8s
