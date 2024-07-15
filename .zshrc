@@ -229,7 +229,7 @@ source <(kubectl completion zsh)
 function gi() { curl -sL https://www.gitignore.io/api/$@ ;}
 
 # asdf
-. $(brew --prefix asdf)/asdf.sh
+. $(brew --prefix asdf)/libexec/asdf.sh
 
 # Pyenv
 export PYENV_ROOT=${HOME}/.pyenv
