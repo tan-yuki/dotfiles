@@ -190,9 +190,6 @@ setopt magic_equal_subst
 # 参考: http://d.hatena.ne.jp/supermassiveblackhole/20100820/1282284495
 ## globでパスを生成したときに、パスがディレクトリだったら最後に「/」をつける。
 setopt mark_dirs
-# tmux solarized
-set -g default-terminal "screen-256color"
-
 
 alias dirs='dirs -p'
 alias gvim='open /Applications/MacVim.app'
@@ -204,9 +201,6 @@ alias ll='ls -altr'
 # vim
 alias vi='nvim'
 alias vim='nvim'
-
-# tmux
-alias tmux="tmux -2"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
