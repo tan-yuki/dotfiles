@@ -1,6 +1,7 @@
 # Install brew-packages
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
+brew "1password-cli"
 brew "ag"
 brew "asdf"
 brew "binutils"
@@ -25,6 +26,7 @@ brew "neovim"
 brew "p11-kit"
 brew "peco"
 brew "pyenv"
+brew "rancher"
 brew "reattach-to-user-namespace"
 brew "tig"
 brew "tmux"
