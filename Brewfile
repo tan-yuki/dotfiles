@@ -4,6 +4,7 @@ tap 'homebrew/cask-fonts'
 brew "1password-cli"
 brew "ag"
 brew "asdf"
+brew "bat"
 brew "binutils"
 brew "coreutils"
 brew "findutils"
